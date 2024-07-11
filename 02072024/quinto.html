@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo Ordine Pizza</title>
+    <style>
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px; 
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            border-radius: 20px;
+            border-width: 4px; 
+            border-style: solid;
+            background-color: linear-gradient(to bottom right, #FFD700, #FFB300); 
+            border-image: linear-gradient(to bottom right, #CCCCCC, #555555) 1; 
+            color: #333333;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8); 
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            cursor: pointer;
+            transform: scale(1.05); 
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        footer {
+            display: flex;
+            flex-direction: row;
+        }
+        header, footer {
+            background-color: #2f2f2f;
+            color: white;
+            text-align: center;
+            width: 100%;
+            margin:0;
+            justify-content: space-around;
+        }
+        body {
+            margin:0;
+            margin-bottom: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #2f2f2f;
+            background-image: url("pizza.jpg");
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+        }
+        main {
+            padding:20px;
+            width: 30vw;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        select {
+            margin-bottom: 10px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+        .radio-group label, .checkbox-group label  {
+            margin-right: 10px;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pizza on-demand</h1>
+    </header>
+    <main>
+        <form action="/submit-order" method="POST">
+            <fieldset>
+                <legend>Informazioni Personali</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" name="cognome" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <small style="display: block;">Formato richiesto: nome@esempio.com</small>
+    
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+    
+                <label for="data-nascita">Data di Nascita:</label>
+                <input type="date" id="data-nascita" name="data-nascita" required>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Ordine Pizza</legend>
+    
+                <fieldset>
+                    <legend>Tipo di Pizza</legend>
+                    <label for="tipo-pizza">Seleziona Tipo di Pizza:</label>
+                    <select id="tipo-pizza" name="tipo-pizza" required>
+                        <option value="margherita">Margherita</option>
+                        <option value="diavola">Diavola</option>
+                        <option value="quattro-stagioni">Quattro Stagioni</option>
+                        <option value="capricciosa">Capricciosa</option>
+                    </select>
+                    <fieldset>
+                        <legend>Ingredienti Extra</legend>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="extra-formaggio" name="ingredienti-extra" value="extra-formaggio">
+                            <label for="extra-formaggio">Extra Formaggio</label>
+                            <input type="checkbox" id="prosciutto" name="ingredienti-extra" value="prosciutto">
+                            <label for="prosciutto">Prosciutto</label>
+                            <input type="checkbox" id="funghi" name="ingredienti-extra" value="funghi"checked>
+                            <label for="funghi">Funghi</label>
+                            <input type="checkbox" id="carciofi" name="ingredienti-extra" value="carciofi"checked>
+                            <label for="carciofi" >Carciofi</label>
+                        </div>
+                    </fieldset>
+    
+                <fieldset>
+                    <legend>Dimensione Pizza</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="small" name="dimensione" value="small">
+                        <label for="small">Piccola</label>
+                        <input type="radio" id="medium" name="dimensione" value="medium" checked>
+                        <label for="medium">Media</label>
+                        <input type="radio" id="large" name="dimensione" value="large">
+                        <label for="large">Grande</label>
+                    </div>
+                </fieldset>
+            </fieldset>
+            <label for="quantita">Quantità:</label>
+            <input type="number" id="quantita" name="quantita" min="1" max="10" required>
+
+            <label for="orario-consegna">Orario di Consegna:</label>
+            <input type="time" id="orario-consegna" name="orario-consegna" required>
+
+            <label for="note">Note Aggiuntive:</label>
+            <textarea id="note" name="note" rows="4" cols="50"></textarea>
+
+            <label for="buono-sconto">Buono Sconto:</label>
+            <input type="text" id="buono-sconto" name="buono-sconto">
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="policy" name="policy" value="policy" checked>
+                <label for="policy">Accetto le policy</label>
+            </div>
+            <input type="submit" value="Invia Ordine">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tutti i diritti riservati.</p>
+        <div class = "button">Policy</div>
+    </footer>
+</body>
+</html>

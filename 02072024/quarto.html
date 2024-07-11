@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabella</title>
+    <style>
+        body{
+            Display: flex;
+            flex-direction: column;
+            background-color: #2f2f2f;
+            color: white;
+            text-align: center;
+            align-items: center;
+        }
+        table, th, tr, td, caption {
+            border: 1px solid white;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        th, caption {
+            font-weight:900;
+        }
+    </style>
+</head>
+<body>
+    <h1>Albergo</h1>
+    <table>
+        <caption>Prezzo di una camera</caption>
+        <thead>
+          <tr>
+            <th>Mese</th>
+            <th>Prezzo</th>
+            <th colspan="2">disponibilità</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gennaio</td>
+            <td>€100</td>
+            <td>disp</td>
+            <td>ness</td>
+          </tr>
+          <tr>
+            <td>Febbraio</td>
+            <td>€80</td>
+            <td>disp</td>
+            <td>ness</td>
+          </tr>
+          <tr>
+            <td>Aprile</td>
+            <td>€180</td>
+            <td>disp</td>
+            <td>ness</td>
+          </tr>
+          <tr>
+            <td>Luglio</td>
+            <td style = "color: lightcoral">€200</td>
+            <td>disp</td>
+            <td>ness</td>
+          </tr>
+        </tbody>
+        <thfoot>
+          <tr>
+            <td>Agosto</td>
+            <td>€250</td>
+            <td>disp</td>
+            <td>ness</td>
+          </tr>
+        </thfoot>
+      </table>
+</body>
+</html>

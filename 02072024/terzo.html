@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>La mia azienda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section h2 {
+            color: #333;
+        }
+        section p {
+            color: #666;
+            font-size: 16px;
+        }
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        section blockquote {
+            font-style: italic;
+            color: #888;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 3px solid #ccc;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+        img {
+            width: 20vw;;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Benvenuti nel mio sito web</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Chi Siamo</a></li>
+            <li><a href="#services">Servizi</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home">
+        <h2>Home</h2>
+        <p>Questo è un paragrafo di testo nella sezione home. <strong>Questo testo è in grassetto.</strong></p>
+        <p>Qui c'è un <a href="https://www.google.com" target="_blank">link esterno</a>.</p>
+    </section>
+
+    <section id="about">
+        <h2>Chi Siamo</h2>
+        <p>Informazioni sulla nostra azienda.</p>
+        <img src="example1.jpg" alt="Immagine di esempio">
+        <figure>
+            <figcaption>Descrizione dell'immagine.</figcaption>
+            <img src="example2.jpg" alt="Immagine di esempio">
+        </figure>
+        <blockquote>
+            <p>Questa è una citazione interessante.</p>
+        </blockquote>
+    </section>
+
+    <section id="services">
+        <h2>Servizi</h2>
+        <p>Offriamo i seguenti servizi:</p>
+        <ul>
+            <li>Servizio 1</li>
+            <li>Servizio 2</li>
+            <li>Servizio 3</li>
+        </ul>
+        <p>Tariffe:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Servizio</th>
+                    <th>Prezzo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Servizio 1</td>
+                    <td>€100</td>
+                </tr>
+                <tr>
+                    <td>Servizio 2</td>
+                    <td>€200</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Altri dettagli:</p>
+        <dl>
+            <dt>Servizio 1</dt>
+            <dd>Descrizione dettagliata del servizio 1.</dd>
+            <dt>Servizio 2</dt>
+            <dd>Descrizione dettagliata del servizio 2.</dd>
+        </dl>
+        <p><a href="#home">Torna su</a></p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Tutti i diritti riservati.</p>
+</footer>
+
+</body>
+</html>
